@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* 1. Стилі для контейнера, щоб центрувати прелоадер і закрити екран */
 .preloader-container {
     /* Робимо його на весь екран */
@@ -13,7 +15,7 @@
     justify-content: center;
     align-items: center;
     /* Гарантуємо, що він буде поверх усіх елементів */
-    z-index: 9999;
+    z-index: 9;
 }
 
 /* 2. Стилі для самого спінера (коло) */
@@ -29,6 +31,27 @@
     animation: spin 1.2s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite; /* Змінив функцію часу для більш унікального ефекту */
     /* Додаємо легку тінь для об'єму */
     box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+}
+
+.box{
+    position: relative;
+    z-index: 10;
+    margin-top: 100px;
+}
+
+h1{
+    text-align: center;
+    color: #1f1f1f;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+h2{
+    text-align: center;
+    color: #474747;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* 3. Визначення ключових кадрів для анімації обертання */

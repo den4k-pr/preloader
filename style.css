@@ -1,0 +1,50 @@
+/* 1. Стилі для контейнера, щоб центрувати прелоадер і закрити екран */
+.preloader-container {
+    /* Робимо його на весь екран */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Додаємо напівпрозорий фон */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Центруємо спінер */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Гарантуємо, що він буде поверх усіх елементів */
+    z-index: 9999;
+}
+
+/* 2. Стилі для самого спінера (коло) */
+.spinner {
+    width: 60px;
+    height: 60px;
+    /* Створюємо коло */
+    border-radius: 50%;
+    /* Створюємо ефект подвійної рамки */
+    border: 6px solid #f3f3f3; /* Легка внутрішня рамка */
+    border-top: 6px solid #3498db; /* Кольорова верхня рамка */
+    /* Плавна анімація обертання */
+    animation: spin 1.2s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite; /* Змінив функцію часу для більш унікального ефекту */
+    /* Додаємо легку тінь для об'єму */
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+}
+
+/* 3. Визначення ключових кадрів для анімації обертання */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        /* Додамо легкий ефект пульсації */
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    }
+    50% {
+        /* Зміна масштабу для ефекту "дихання" */
+        transform: rotate(180deg) scale(1.1);
+        box-shadow: 0 0 25px rgba(52, 152, 219, 0.7);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    }
+}
